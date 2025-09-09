@@ -1,0 +1,18 @@
+{
+  "config": {
+    "chainId": 999,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0
+  },
+  "alloc": {
+    "0x1234567890abcdef1234567890abcdef1234561E": {
+      "balance": "999000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "coinbase": "0x1234567890abcdef1234567890abcdef1234561E",
+  "difficulty": "0x1",
+  "gasLimit": "0x47E7C4"
+}
