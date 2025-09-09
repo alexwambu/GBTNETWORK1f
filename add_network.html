@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add GBTNetwork to MetaMask</title>
+</head>
+<body>
+  <h2>Connect GBTNetwork</h2>
+  <button id="addNetwork">Add to MetaMask</button>
+
+  <script>
+    document.getElementById("addNetwork").onclick = async () => {
+      if (window.ethereum) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [{
+              chainId: '0x3E7', // 999
+              chainName: 'GBTNetwork',
+              rpcUrls: ['http://localhost:9636', 'http://GBTNetwork:9636', 'https://gbtnetwork.onrender.com'],
+              nativeCurrency: {
+                name: 'GoldBarTether',
+                symbol: 'GBT',
+                decimals: 18
+              },
+              blockExplorerUrls: ['https://gbtnetwork-explorer.onrender.com']
+            }]
+          });
+          alert("✅ GBTNetwork added to MetaMask!");
+        } catch (error) {
+          console.error(error);
+          alert("❌ Failed to add network.");
+        }
+      } else {
+        alert("⚠️ MetaMask not detected!");
+      }
+    }
+  </script>
+</body>
+</html>
