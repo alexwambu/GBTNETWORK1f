@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gbtnetwork
+    env: docker
+    plan: starter
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    ports:
+      - 9636
+      - 8000
